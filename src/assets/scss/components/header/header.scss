@@ -1,0 +1,127 @@
+header {
+  height: 100%;
+  padding: 70px 150px 0 150px;
+
+  background-color: #0e1a35;
+  background-image: url("/assets/img/grid.png"),
+    url("/assets/img/line_header.png");
+  background-position: top 190px center, top 200px center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and(max-width: $desktopWidth) {
+    padding: 70px 70px 0 70px;
+  }
+  @media screen and(max-width: $tableWidth) {
+    padding: 30px 15px 0 15px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      &__logo {
+        img {
+          animation: logo-deg 4s linear infinite;
+          @media screen and(max-width: $phoneWidth) {
+            width: 45px;
+          }
+        }
+      }
+      @keyframes logo-deg {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      &__title {
+        font-size: rem(35px);
+        margin: 0 0 0 20px;
+        letter-spacing: 1.5px;
+        color: #fff;
+        @media screen and(max-width: $phoneWidth) {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+    .nav-wrap {
+      margin: 0 0 0 auto;
+      display: inherit;
+      align-items: center;
+      nav {
+        @media screen and(max-width: $phoneWidth) {
+          display: none;
+        }
+        ul {
+          list-style: none;
+          li {
+            a {
+              padding: 5px 25px;
+              font-size: rem(18px);
+              letter-spacing: 0.24px;
+              transition: color 400ms;
+              &:hover {
+                color: $txt-color;
+              }
+            }
+          }
+        }
+      }
+      .login-wrap {
+        margin: 0 0 0 20px;
+        &__login {
+          cursor: pointer;
+          width: 130px;
+          padding: 15px 0;
+          border-radius: 24px;
+          color: $color-primary;
+          background: transparent;
+          border: 1px solid rgba(85, 132, 255, 0.3);
+          transition: border 400ms, color 400ms;
+          &:hover {
+            color: rgba(85, 132, 255, 0.8);
+            border: 1px solid $color-primary;
+          }
+          @media screen and(max-width: $phoneWidth) {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    text-align: center;
+    margin: 130px 0 0 0;
+    max-width: 100%;
+    h3 {
+      margin: 10px 0 0 0;
+      font-size: rem(36px);
+    }
+    .button-wrap {
+      margin: 80px 0 0 0;
+      @media screen and(max-width: $tableWidth) {
+        margin: 40px 0 0 0;
+      }
+    }
+    .merkury-home {
+      margin: 50px auto 0 auto;
+      width: 100%;
+      max-width: 882px;
+      box-shadow: 0 0 30px 15px #132347;
+      z-index: 4;
+      @media screen and(max-width: $tableWidth) {
+        max-width: 650px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        z-index: 6;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,185 @@
+.drag-drop {
+  margin: 50px 0 0 0;
+
+  background-color: #0e1a35;
+  background-image: url("/assets/img/grid.png"),
+    url("/assets/img/line_header.png");
+  background-position: top center, top 100px center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  .container {
+    margin: 0 auto 0 0;
+    padding: 160px 0;
+    max-width: 100%;
+    display: flex;
+    @media screen and(max-width: $tableWidth) {
+      flex-wrap: wrap;
+    }
+    @media screen and(max-width: $phoneWidth) {
+      padding: 50px 0;
+    }
+    .drop-wrap {
+      margin: 0 0 0 40px;
+      width: 50%;
+      display: flex;
+      @media screen and(max-width: $tableWidth) {
+        width: 100%;
+        padding: 0 20px;
+        margin: 40px 0 0 0;
+        order: 2;
+      }
+      @media screen and(max-width: $phoneWidth) {
+        display: none;
+      }
+      &__title {
+        position: relative;
+        .arrow-right {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          fill: $txt-color;
+          width: 20px;
+          height: 20px;
+          @media screen and(max-width: $desktopWidth) {
+            display: none;
+          }
+        }
+      }
+
+      .progres {
+        &-img__wrap {
+          margin: 25px 0 0 0;
+          img {
+            width: 100%;
+          }
+          .handle-img {
+            margin: 30px 0 0 0;
+            position: relative;
+            transform: translateX(27px);
+            cursor: pointer;
+            .hand-wrap {
+              position: absolute;
+              bottom: -10px;
+              right: -10px;
+              z-index: 3;
+              img {
+                position: relative;
+                z-index: 4;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 96px;
+                height: 96px;
+                border-radius: 50%;
+                background-color: $txt-color;
+                opacity: 0.2;
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 76px;
+                height: 76px;
+                border-radius: 50%;
+                background-color: $txt-color;
+                opacity: 0.2;
+              }
+            }
+          }
+        }
+      }
+      .completed {
+        margin: 0 0 0 48px;
+
+        span {
+          margin: 0;
+        }
+        &-drop {
+          margin: 8px 0 0 0;
+          border: 1px dashed $txt-color;
+          text-align: center;
+          span {
+            font-size: rem(21px);
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+      h4 {
+        color: #fff;
+        font-size: rem(31px);
+        position: relative;
+        @media screen and(max-width: $desktopWidth) {
+          font-size: rem(28px);
+        }
+        span {
+          margin: 0 0 0 15px;
+          color: $txt-color;
+        }
+      }
+    }
+    .txt-wrap {
+      padding: 45px 0 0 0;
+      margin: 0 0 0 50px;
+      @media screen and(max-width: $tableWidth) {
+        padding: 0 20px;
+        margin: 0;
+      }
+      .titles-sections {
+        color: #fff;
+      }
+      .txt-description {
+        width: 90%;
+      }
+      .txt-button {
+        position: relative;
+        width: 35px;
+        height: 35px;
+        margin: 50px 15px 0 0;
+        border: 1px solid $txt-color;
+        border-radius: 50%;
+        background-color: transparent;
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 500ms;
+        &:hover {
+          opacity: .8;
+        }
+        &.left {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-45%, -50%);
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-right: 10px solid $txt-color;
+            border-bottom: 7px solid transparent;
+          }
+        }
+        &.right {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-55%, -50%);
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-left: 10px solid $txt-color;
+            border-bottom: 7px solid transparent;
+          }
+        }
+      }
+    }
+  }
+}

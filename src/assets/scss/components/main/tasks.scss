@@ -1,0 +1,97 @@
+.tasks-wrap {
+  background: #fff;
+  margin: -150px 0 0 0;
+  padding: 200px 0 0 0;
+  z-index: 5;
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .task {
+      width: 100%;
+      max-width: 365px;
+      margin: 0 40px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 400ms;
+      &.visible {
+        opacity: 1;
+      }
+
+      &-img__wrap {
+        position: relative;
+        padding: 60px 0;
+        width: 80px;
+        margin: 0 auto;
+        .task-img {
+          width: 100%;
+        }
+      }
+      &-title {
+        @include font-bold;
+        letter-spacing: 0.48px;
+        font-size: rem(24px);
+        color: #0e1a35;
+        @media screen and(max-width: $tableWidth) {
+          font-size: rem(28px);
+        }
+      }
+      &-description {
+        margin: 30px 0 50px 0;
+        letter-spacing: 0.36px;
+        color: $txt-color;
+        font-size: rem(18px);
+      }
+      &-link__wrap {
+        position: relative;
+        width: 250px;
+        margin: 0 auto;
+        border-radius: 24px;
+        border: 1px solid rgba(132, 146, 175, 0.3);
+        overflow: hidden;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -60%;
+          width: 52%;
+          height: 100%;
+          background-color: $color-primary;
+          transition: left 800ms;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -60%;
+          width: 52%;
+          height: 100%;
+          background-color: $color-primary;
+          transition: right 800ms;
+        }
+        &:hover {
+          &::before {
+            left: 0;
+          }
+          &::after {
+            right: 0;
+          }
+        }
+        .task-link {
+          position: relative;
+          z-index: 10;
+          display: block;
+          width: 100%;
+          color: #0e1a35;
+          letter-spacing: 0.24px;
+          font-size: rem(18px);
+          padding: 14px 0;
+          transition: color 600ms;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

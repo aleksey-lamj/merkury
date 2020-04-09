@@ -1,0 +1,24 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import "./utils/fonts";
+@import "./utils/variable";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: ($root-font-size / 16px) * 100%;
+  @media (max-width: $tableWidth) {
+    font-size: ($root-font-size / 16px) * 100% * 0.75; // Уменьшить rem на 25% в маленьких дисплеях
+  }
+}
+body {
+  @include font-regular;
+  color: $txt-color;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+@import "./components/components";

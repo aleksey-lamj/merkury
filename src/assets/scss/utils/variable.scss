@@ -1,0 +1,26 @@
+$color-primary: #5584ff;
+$txt-color:#8492af;
+
+
+$desktopWidth: 1024px;
+$smDesktopWidth: 992px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+$root-font-size: 16px;
+@function rem($size) {
+  @return $size / $root-font-size * 1rem;
+}
+@mixin font-thin {
+  font-family: "Roboto Thin";
+}
+@mixin font-regular {
+  font-family: "Roboto Regular";
+}
+@mixin font-medium {
+  font-family: "Roboto Medium";
+}
+@mixin font-bold {
+  font-family: "Roboto Bold";
+}

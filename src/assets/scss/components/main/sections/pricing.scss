@@ -1,0 +1,88 @@
+.pricing {
+  margin: 100px 0 0 0;
+  padding: 0 0 100px 0;
+  .container {
+    border-bottom: 1px solid #8492af;
+    .titles-sections {
+      color: #0e1a35;
+      text-align: center;
+    }
+    .price-wrap {
+      margin: 70px 0 100px 0;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .cart {
+        padding: 40px 50px;
+        margin: 20px 10px;
+        box-shadow: 0 0 25px 2px rgba(14, 26, 53, 0.15);
+        transition: transform 500ms, opacity 500ms;
+        opacity: 0;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &-price__wrap {
+          text-align: center;
+        }
+        &-title {
+          color: #0e1a35;
+          text-transform: uppercase;
+          font-size: rem(24px);
+          letter-spacing: 0.48px;
+          margin: 0 0 30px 0;
+          text-align: center;
+        }
+        &-currency {
+          font-size: rem(40px);
+          color: #0e1a35;
+          @include font-bold;
+        }
+        &-price {
+          font-size: rem(72px);
+          letter-spacing: 1.44px;
+          margin: 0 0 0 -5px;
+          color: #0e1a35;
+          @include font-bold;
+        }
+        &-month {
+          margin: 0 0 0 -10px;
+          letter-spacing: 0.48px;
+          font-size: rem(24px);
+        }
+        .sections-list {
+          margin: 40px 0 0 0;
+          .success {
+            color: $txt-color;
+          }
+          li {
+            font-size: rem(18px);
+            margin: 0 0 15px 0;
+          }
+        }
+      }
+      .visible {
+        opacity: 1;
+      }
+    }
+    .description-wrap {
+      text-align: center;
+    }
+    .pricing-description {
+      margin: 0 auto 60px auto;
+      width: 60%;
+      color: $txt-color;
+      font-size: rem(18px);
+    }
+    .button-wrap {
+      position: relative;
+      top: 26px;
+      display: inline-block;
+      padding: 0 15px;
+      background: #fff;
+      &:hover .button-sections {
+        color: $color-primary;
+      }
+    }
+  }
+}
