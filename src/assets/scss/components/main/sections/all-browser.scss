@@ -90,7 +90,7 @@
     &::before {
       content: "";
       display: inline-block;
-      background-image: url("/assets/img/success.png");
+      background-image: url("./assets/img/success.png");
       background-size: contain;
       margin: 0 8px 0 0;
       width: 24px;
@@ -102,7 +102,7 @@
     &::before {
       content: "";
       display: inline-block;
-      background-image: url("/assets/img/error.png");
+      background-image: url("./assets/img/error.png");
       margin: 0 8px 0 0;
       width: 24px;
       height: 24px;
